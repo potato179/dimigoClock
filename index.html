@@ -29,7 +29,7 @@
                 margin: 50px; 
             }
         </style>
-        <meta http-equiv = "refresh" content = "300">
+        <meta http-equiv = "refresh" content = "1000">
     </head>
     <body>
 
@@ -47,8 +47,8 @@
             </div>
             <br><br><br><br><br><br>
             <div class = "center">
-                <br>
-                <h1 class = "white">여기에 뭐 띄울지 추천좀</h1>
+                <br><br><br>
+                <span id = "timemain" class = "bold white" style = "font-size: 1000%;">시계</span><br>
                 <div id = "nmsg1" class = "bold white" style = "display: none; font-size: 500%;">1</div>
                 <div id = "nmsg2" class = "bold white" style = "display: none; font-size: 500%;">2</div>
             </div>
@@ -75,6 +75,7 @@
                 var msgList = [""];
 
                 document.getElementById("time").innerHTML = dateDisplay;
+                document.getElementById("timemain").innerHTML = dateDisplay;
                 document.getElementById("date").innerHTML = timeDisplay;
 
                 dateInfo.getHours();
