@@ -4,6 +4,7 @@
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
         <title>디미고 시계</title>
+        <link rel = "icon" href = "./img/dimigoLogo.png">
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity = "sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin = "anonymous">
         <link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel = "stylesheet" integrity = "sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin = "anonymous">
@@ -35,7 +36,7 @@
 
         <div id = "main" style = "">
             <div class = "d-flex align-items-center text-decoration-none" style = "float: left;">
-                <img src = "./dimigoLogo.png" style = "width: 50px; display: inline-block;">&nbsp;&nbsp;&nbsp;
+                <img src = "./img/dimigoLogo.png" style = "width: 50px; display: inline-block;">&nbsp;&nbsp;&nbsp;
                 <h1 class = "white">한국디지털미디어고등학교</h1>
             </div>
             <div id = "clock" class = "bold" style = "text-align: right; float: right; margin-right: 40px; display: inline-block;">
@@ -81,36 +82,42 @@
                 dateInfo.getHours();
 
                 var time = [
-                    ["6:30", "7:40", "기상"],
-                    ["7:40", "8:15", "아침식사"],
-                    ["8:15", "8:35", "아침자습"],
-                    ["8:35", "8:45", "주번활동"],
-                    ["8:45", "8:55", "조회"],
-                    ["8:55", "9:0", "휴식"],
-                    ["9:0", "9:50", "1교시"],
-                    ["9:50", "10:0", "휴식"],
-                    ["10:0", "10:50", "2교시"],
-                    ["10:50", "11:0", "휴식"],
-                    ["11:0", "11:50", "3교시"],
-                    ["11:50", "12:0", "휴식"],
-                    ["12:0", "12:50", "4교시"],
-                    ["12:50", "13:50", "점심식사"],
-                    ["13:50", "14:40", "5교시"],
-                    ["14:40", "14:50", "휴식"],
-                    ["14:50", "15:40", "6교시"],
-                    ["15:40", "15:50", "휴식"],
-                    ["15:50", "16:40", "7교시"],
-                    ["16:40", "17:5", "종례"],
-                    ["17:5", "17:10", "휴식"],
-                    ["17:10", "17:50", "방과후T1"],
-                    ["17:50", "17:55", "휴식"],
-                    ["17:55", "18:35", "방과후T2"],
-                    ["18:35", "19:50", "저녁식사"],
-                    ["19:10", "21:10", "야자T1"],
-                    ["21:10", "21:30", "방과후T1"],
-                    ["21:30", "22:30", "야자T2"],
-                    ["22:30", "30:30", "취침"]
-                ]
+                    [6, 30, 7, 40,  "기상"],
+                    [7, 40, 8, 15,  "아침식사"],
+                    [8, 15, 8, 35,  "아침자습"],
+                    [8, 35, 8, 45,  "주번활동"],
+                    [8, 45, 8, 55,  "조회"],
+                    [8, 55, 9, 0,  "휴식"],
+                    [9, 0, 9, 50,  "1교시"],
+                    [9, 50, 10, 0,  "휴식"],
+                    [10, 0, 10, 50,  "2교시"],
+                    [10, 50, 11, 0,  "휴식"],
+                    [11, 0, 11, 50,  "3교시"],
+                    [11, 50, 12, 0,  "휴식"],
+                    [12, 0, 12, 50,  "4교시"],
+                    [12, 50, 13, 50,  "점심식사"],
+                    [13, 50, 14, 40,  "5교시"],
+                    [14, 40, 14, 50,  "휴식"],
+                    [14, 50, 15, 40,  "6교시"],
+                    [15, 40, 15, 50,  "휴식"],
+                    [15, 50, 16, 40,  "7교시"],
+                    [16, 40, 17, 5,  "종례"],
+                    [17, 5, 17, 10,  "휴식"],
+                    [17, 10, 17, 50,  "방과후T1"],
+                    [17, 50, 17, 55,  "휴식"],
+                    [17, 55, 18, 35,  "방과후T2"],
+                    [18, 35, 19, 50,  "저녁식사"],
+                    [19, 10, 21, 10,  "야자T1"],
+                    [21, 10, 21, 30,  "방과후T1"],
+                    [21, 30, 22, 30,  "야자T2"],
+                    [22, 30, 30, 30,  "취침"]
+                ];
+
+                for(var i=0; i<time.length; i++){
+                    if(time[i][1] === hour*1){
+                        console.log("asdfsdf", time[i][1]);
+                    }
+                }
 
 
 
@@ -444,7 +451,6 @@
             }
 
             function endTime(endHour, endMin, hour, min){
-                console.log(endHour, endMin, hour, min)
                 if(endHour === hour*1){
                     $("#timeleft").html(endMin - min*1 - 1);
                 }
