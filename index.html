@@ -114,8 +114,11 @@
                 ];
 
                 for(var i=0; i<time.length; i++){
-                    if(time[i][1] === hour*1){
-                        console.log("asdfsdf", time[i][1]);
+                    if(time[i][0] <= hour*1 && hour*1 <= time[i][2]){
+                        if(time[i][0]){
+
+                        }
+                        console.log("asdfsdf", time[i][0]);
                     }
                 }
 
@@ -312,7 +315,12 @@
                         $("#nmsg1").html("잠시후 <span class = 'yellow'>종례</span>가 시작됩니다.");
                         $("#nmsg2").html("미리 준비하시기 바랍니다.");
                     }
-
+                    if(40 <= min*1){
+                        endTime(17, 10, hour, min);
+                        $("#startTime").html("16:40");
+                        $("#endTime").html("17:10");
+                        $("#timeName").html("종례");
+                    }
                 }
                 if(hour*1 === 17){
                     if(min*1 === 9){
