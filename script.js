@@ -120,9 +120,9 @@ function setClock(){
     if(hour*1 === 10){
         if(min*1 <= 50){
             endTime(10, 50, hour, min);
-            $("#startTime").html("09:00");
-            $("#endTime").html("09:50");
-            $("#timeName").html("1교시");
+            $("#startTime").html("10:00");
+            $("#endTime").html("10:50");
+            $("#timeName").html("2교시");
         }
         if(min*1 === 49){
             showPopup();
@@ -132,8 +132,8 @@ function setClock(){
         if(50 <= min*1 && min*1 <= 55){
             hidePopup();
             endTime(10, 55, hour, min);
-            $("#startTime").html("09:50");
-            $("#endTime").html("10:00");
+            $("#startTime").html("10:50");
+            $("#endTime").html("11:00");
             $("#timeName").html("휴식");
         }
         if(min*1 === 59){
