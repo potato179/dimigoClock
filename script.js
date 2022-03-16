@@ -429,4 +429,3 @@ window.onload = function(){
     setClock();
     setInterval(setClock, 1000);
 }
-function notify(message){}
