@@ -293,6 +293,27 @@
                         $("#nmsg1").html("잠시후 <span class = 'yellow'>7교시</span>가 시작됩니다.");
                         $("#nmsg2").html("미리 준비하시기 바랍니다.");
                     }
+                    if(50 <= min*1){
+                        hidePopup();
+                        endTime(15, 50, hour, min);
+                        $("#startTime").html("15:50");
+                        $("#endTime").html("16:40");
+                        $("#timeName").html("7교시");
+                    }
+                }
+                if(hour*1 === 16){
+                    if(min*1 <= 40){
+                        endTime(15, 40, hour, min);
+                        $("#startTime").html("15:50");
+                        $("#endTime").html("16:40");
+                        $("#timeName").html("7교시");
+                    }
+                    if(min*1 === 39){
+                        showPopup();
+                        $("#nmsg1").html("잠시후 <span class = 'yellow'>종례</span>가 시작됩니다.");
+                        $("#nmsg2").html("미리 준비하시기 바랍니다.");
+                    }
+
                 }
                 if(hour*1 === 17){
                     if(min*1 === 9){
