@@ -120,6 +120,7 @@ function setClock(){
     }
     if(hour*1 === 10){
         if(min*1 <= 50){
+            hidePopup();
             endTime(10, 50, hour, min);
             $("#startTime").html("10:00");
             $("#endTime").html("10:50");
