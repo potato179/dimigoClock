@@ -56,6 +56,12 @@ function setClock(){
     }
     */
     if(hour*1 === 8){
+        if(15 <= min*1 && min*1 <= 35){
+            endTime(8, 35, hour, min);
+            $("#startTime").html("08:15");
+            $("#endTime").html("08:35");
+            $("#timeName").html("아침자습");
+        }
         if(35 <= min*1 && min*1 <= 45){
             endTime(8, 45, hour, min);
             $("#startTime").html("08:35");
