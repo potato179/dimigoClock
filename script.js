@@ -129,7 +129,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1 && min*1 <= 55){
+        if(50 <= min*1){
             hidePopup();
             endTime(11, 0, hour, min);
             $("#startTime").html("10:50");
