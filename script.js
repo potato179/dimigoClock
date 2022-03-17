@@ -138,7 +138,7 @@ function setClock(){
         }
         if(min*1 === 59){
             showPopup();
-            $("#nmsg1").html("잠시후 <span class = 'yellow'>2교시</span>가 시작됩니다.");
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>3교시</span>가 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
     }
@@ -163,7 +163,7 @@ function setClock(){
         }
         if(min*1 === 59){
             showPopup();
-            $("#nmsg1").html("잠시후 <span class = 'yellow'>2교시</span>가 시작됩니다.");
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>4교시</span>가 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
     }
