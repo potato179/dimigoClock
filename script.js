@@ -248,21 +248,12 @@ function setClock(){
     }
     if(hour*1 === 17){
         if(min*1 === 9){
-
-
-
-
-
-
-
-
-
-
             showPopup();
             $("#nmsg1").html("잠시후 <span class = 'yellow'>방과후T1</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
         if(0 <= min*1 && min*1 <= 49){
+            hidePopup();
             endTime(17, 50, hour, min);
             $("#startTime").html("17:10");
             $("#endTime").html("17:50");
