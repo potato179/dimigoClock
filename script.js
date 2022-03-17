@@ -94,6 +94,7 @@ function setClock(){
     }
     if(hour*1 === 9){
         if(min*1 <= 50){
+            hidePopup();
             endTime(9, 50, hour, min);
             $("#startTime").html("09:00");
             $("#endTime").html("09:50");
