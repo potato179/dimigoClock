@@ -208,6 +208,38 @@ function setClock(){
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
     }
+    if(hour*1 === 14){
+        if(min*1 <= 40){
+            endTime(14, 40, hour, min);
+            $("#startTime").html("13:50");
+            $("#endTime").html("14:40");
+            $("#timeName").html("5교시");
+        }
+        if(min*1 === 39){
+            showPopup();
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
+            $("#nmsg2").html("미리 준비하시기 바랍니다.");
+        }
+        if(40 <= min*1 && min*1 <= 50){
+            hidePopup();
+            endTime(14, 50, hour, min);
+            $("#startTime").html("14:40");
+            $("#endTime").html("14:50");
+            $("#timeName").html("휴식");
+        }
+        if(min*1 === 49){
+            showPopup();
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>6교시</span>가 시작됩니다.");
+            $("#nmsg2").html("미리 준비하시기 바랍니다.");
+        }
+        if(50 <= min*1){
+            hidePopup();
+            endTime(15, 40, hour, min);
+            $("#startTime").html("14:50");
+            $("#endTime").html("15:40");
+            $("#timeName").html("6교시");
+        }
+    }
     if(hour*1 === 15){
         if(min*1 <= 40){
             endTime(15, 40, hour, min);
