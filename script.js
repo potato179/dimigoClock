@@ -55,14 +55,70 @@ function setClock(){
         }
     }
     */
+    if(hour*1 < 6){
+        hidePopup();
+        endTime(6, 30, hour, min);
+        $("#startTime").html("22:30");
+        $("#endTime").html("+1 6:30");
+        $("#timeName").html("취침");
+    }
+    if(hour*1 === 6){
+        if(min*1 <= 30){
+            hidePopup();
+            endTime(6, 30, hour, min);
+            $("#startTime").html("22:30");
+            $("#endTime").html("+1 6:30");
+            $("#timeName").html("취침");
+        }
+        if(min*1 === 29){
+            showPopup();
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>기상</span>이 시작됩니다.");
+            $("#nmsg2").html("미리 준비하시기 바랍니다.");
+        }
+        if(30 < min*1){
+            hidePopup();
+            endTime(7, 40, hour, min);
+            $("#startTime").html("06:30");
+            $("#endTime").html("07:40");
+            $("#timeName").html("기상");
+        }
+    }
+    if(hour*1 === 7){
+        if(min*1 <= 40){
+            hidePopup();
+            endTime(7, 40, hour, min);
+            $("#startTime").html("06:30");
+            $("#endTime").html("07:40");
+            $("#timeName").html("기상");
+        }
+        if(min*1 === 39){
+            showPopup();
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>아침식사</span>가 시작됩니다.");
+            $("#nmsg2").html("미리 준비하시기 바랍니다.");
+        }
+        if(40 < min*1){
+            hidePopup();
+            endTime(8, 15, hour, min);
+            $("#startTime").html("07:40");
+            $("#endTime").html("08:15");
+            $("#timeName").html("아침식사");
+        }
+    }
     if(hour*1 === 8){
-        if(15 <= min*1 && min*1 <= 35){
+        if(min*1 <= 15){
+            hidePopup();
+            endTime(8, 15, hour, min);
+            $("#startTime").html("07:40");
+            $("#endTime").html("08:15");
+            $("#timeName").html("아침식사");
+        }
+        if(15 < min*1 && min*1 <= 35){
             endTime(8, 35, hour, min);
             $("#startTime").html("08:15");
             $("#endTime").html("08:35");
             $("#timeName").html("아침자습");
         }
-        if(35 <= min*1 && min*1 <= 45){
+        if(35 < min*1 && min*1 <= 45){
             endTime(8, 45, hour, min);
             $("#startTime").html("08:35");
             $("#endTime").html("08:45");
@@ -73,7 +129,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>아침조회</span>가 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(45 <= min*1 && min*1 <= 55){
+        if(45 < min*1 && min*1 <= 55){
             hidePopup();
             endTime(8, 55, hour, min);
             $("#startTime").html("08:45");
@@ -85,7 +141,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(55 <= min*1){
+        if(55 < min*1){
             hidePopup();
             endTime(9, 0, hour, min);
             $("#startTime").html("08:55");
@@ -111,7 +167,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1 && min*1 <= 55){
+        if(50 < min*1 && min*1 <= 55){
             hidePopup();
             endTime(9, 55, hour, min);
             $("#startTime").html("09:50");
@@ -121,27 +177,6 @@ function setClock(){
         if(min*1 === 59){
             showPopup();
             $("#nmsg1").html("잠시후 <span class = 'yellow'>2교시</span>가 시작됩니다.");
-            $("#nmsg2").html("미리 준비하시기 바랍니다.");
-        }
-    }
-    if(hour*1 < 6){
-        hidePopup();
-        endTime(6, 30, hour, min);
-        $("#startTime").html("22:30");
-        $("#endTime").html("+1 6:30");
-        $("#timeName").html("취침");
-    }
-    if(hour*1 === 6){
-        if(min*1 <= 30){
-            hidePopup();
-            endTime(6, 30, hour, min);
-            $("#startTime").html("22:30");
-            $("#endTime").html("+1 6:30");
-            $("#timeName").html("취침");
-        }
-        if(min*1 === 29){
-            showPopup();
-            $("#nmsg1").html("잠시후 <span class = 'yellow'>기상</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
     }
@@ -158,7 +193,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1){
+        if(50 < min*1){
             hidePopup();
             endTime(11, 0, hour, min);
             $("#startTime").html("10:50");
@@ -183,7 +218,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1 && min*1 <= 55){
+        if(50 < min*1 && min*1 <= 55){
             hidePopup();
             endTime(11, 55, hour, min);
             $("#startTime").html("11:50");
@@ -208,7 +243,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1){
+        if(50 < min*1){
             hidePopup();
             endTime(13, 50, hour, min);
             $("#startTime").html("12:50");
@@ -241,7 +276,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(40 <= min*1 && min*1 <= 50){
+        if(40 < min*1 && min*1 <= 50){
             hidePopup();
             endTime(14, 50, hour, min);
             $("#startTime").html("14:40");
@@ -253,7 +288,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>6교시</span>가 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1){
+        if(50 < min*1){
             hidePopup();
             endTime(15, 40, hour, min);
             $("#startTime").html("14:50");
@@ -273,7 +308,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(40 <= min*1 && min*1 <= 50){
+        if(40 < min*1 && min*1 <= 50){
             hidePopup();
             endTime(15, 50, hour, min);
             $("#startTime").html("15:40");
@@ -285,7 +320,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>7교시</span>가 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1){
+        if(50 < min*1){
             hidePopup();
             endTime(16, 40, hour, min);
             $("#startTime").html("15:50");
@@ -313,7 +348,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>방과후T1</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(0 <= min*1 && min*1 <= 49){
+        if(0 < min*1 && min*1 <= 49){
             hidePopup();
             endTime(17, 50, hour, min);
             $("#startTime").html("17:10");
@@ -325,7 +360,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>쉬는시간</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1 && min*1 <= 54){
+        if(50 < min*1 && min*1 <= 54){
             hidePopup();
             endTime(17, 55, hour, min);
             $("#startTime").html("17:50");
@@ -337,7 +372,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>방과후T2</span>가 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(55 <= min*1){
+        if(55 < min*1){
             hidePopup();
             endTime(18, 35, hour, min);
             $("#startTime").html("17:55");
@@ -362,7 +397,7 @@ function setClock(){
             $("#nmsg1").html("<span class = 'yellow'>삭사이동</span>이 시작되었습니다.");
             $("#nmsg2").html("감사합니다.");
         }
-        if(35 <= min*1){
+        if(35 < min*1){
             hidePopup();
             endTime(19, 50, hour, min);
             $("#startTime").html("18:35");
@@ -387,7 +422,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>야자T1</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(50 <= min*1){
+        if(50 < min*1){
             hidePopup();
             endTime(21, 10, hour, min);
             $("#startTime").html("19:50");
@@ -413,7 +448,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>휴식시간</span>이 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(10 <= min*1 && min*1 <= 30){
+        if(10 < min*1 && min*1 <= 30){
             hidePopup();
             endTime(21, 30, hour, min);
             $("#startTime").html("21:10");
@@ -425,7 +460,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>야자T2</span>가 시작됩니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-        if(30 <= min*1){
+        if(30 < min*1){
             endTime(22, 30, hour, min);
             $("#startTime").html("21:30");
             $("#endTime").html("22:30");
@@ -445,7 +480,7 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>기숙사 이동</span>이 있겠습니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다. 수고하셨습니다.");
         }
-        if(30 <= min*1){
+        if(30 < min*1){
             endTime(30, 30, hour, min);
             $("#startTime").html("22:30");
             $("#endTime").html("+1 06:30");
