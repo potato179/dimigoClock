@@ -124,6 +124,27 @@ function setClock(){
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
     }
+    if(hour*1 < 6){
+        hidePopup();
+        endTime(6, 30, hour, min);
+        $("#startTime").html("22:30");
+        $("#endTime").html("+1 6:30");
+        $("#timeName").html("취침");
+    }
+    if(hour*1 === 6){
+        if(min*1 <= 30){
+            hidePopup();
+            endTime(6, 30, hour, min);
+            $("#startTime").html("22:30");
+            $("#endTime").html("+1 6:30");
+            $("#timeName").html("취침");
+        }
+        if(min*1 === 29){
+            showPopup();
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>기상</span>이 시작됩니다.");
+            $("#nmsg2").html("미리 준비하시기 바랍니다.");
+        }
+    }
     if(hour*1 === 10){
         if(min*1 <= 50){
             hidePopup();
