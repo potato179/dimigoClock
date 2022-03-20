@@ -111,6 +111,11 @@ function setClock(){
             $("#endTime").html("08:15");
             $("#timeName").html("아침식사");
         }
+        if(min*1 === 14){
+            showPopup();
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>아침자습</span>이 시작됩니다.");
+            $("#nmsg2").html("미리 준비하시기 바랍니다.");
+        }
         if(15 < min*1 && min*1 <= 35){
             endTime(8, 35, hour, min);
             $("#startTime").html("08:15");
