@@ -505,7 +505,7 @@ function endTime(endHour, endMin, hour, min){
         $("#timeleft").html(endMin - min*1 - 1);
     }
     else{
-        $("#timeleft").html((endHour*60) + endMin - hour*1*60 - min*1);            
+        $("#timeleft").html((endHour*60) + endMin - hour*1*60 - min*1 - 1);            
     }
 }
 function showPopup(){
