@@ -267,6 +267,13 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>5교시</span>가 시작합니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
+        if(50 <= min*1){
+            hidePopup();
+            endTime(14, 40, hour, min);
+            $("#startTime").html("13:50");
+            $("#endTime").html("14:40");
+            $("#timeName").html("5교시");
+        }
     }
     if(hour*1 === 14){
         if(min*1 < 40){
