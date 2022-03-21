@@ -212,6 +212,7 @@ function setClock(){
     }
     if(hour*1 === 11){
         if(min*1 < 50){
+            hidePopup();
             endTime(11, 50, hour, min);
             $("#startTime").html("11:00");
             $("#endTime").html("11:50");
@@ -237,6 +238,7 @@ function setClock(){
     }
     if(hour*1 === 12){
         if(min*1 < 50){
+            hidePopup();
             endTime(12, 50, hour, min);
             $("#startTime").html("12:00");
             $("#endTime").html("12:50");
@@ -472,6 +474,7 @@ function setClock(){
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
         if(30 <= min*1){
+            hidePopup();
             endTime(22, 30, hour, min);
             $("#startTime").html("21:30");
             $("#endTime").html("22:30");
