@@ -224,7 +224,7 @@ function setClock(){
         }
         if(50 <= min*1 && min*1 < 55){
             hidePopup();
-            endTime(11, 55, hour, min);
+            endTime(12, 0, hour, min);
             $("#startTime").html("11:50");
             $("#endTime").html("12:00");
             $("#timeName").html("휴식");
