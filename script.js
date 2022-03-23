@@ -254,7 +254,7 @@ function setClock(){
             endTime(13, 50, hour, min);
             $("#startTime").html("12:50");
             $("#endTime").html("13:50");
-            $("#timeName").html("점심시간");
+            $("#timeName").html("점심식사");
         }
     }
     if(hour*1 === 13){
@@ -262,7 +262,7 @@ function setClock(){
             endTime(13, 50, hour, min);
             $("#startTime").html("12:50");
             $("#endTime").html("13:50");
-            $("#timeName").html("점심시간");
+            $("#timeName").html("점심식사");
         }
         if(min*1 === 49){
             showPopup();
@@ -353,7 +353,13 @@ function setClock(){
             $("#nmsg1").html("잠시후 <span class = 'yellow'>종례</span>가 시작합니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
-
+        if(40 <= min*1){
+            hidePopup();
+            endTime(19, 50, hour, min);
+            $("#startTime").html("16:40");
+            $("#endTime").html("17:10");
+            $("#timeName").html("종례");
+        }
     }
     if(hour*1 === 17){
         if(min*1 === 9){
@@ -402,7 +408,7 @@ function setClock(){
         }
         if(min*1 === 34){
             showPopup();
-            $("#nmsg1").html("잠시후 <span class = 'yellow'>석식시간</span>이 시작합니다.");
+            $("#nmsg1").html("잠시후 <span class = 'yellow'>저녁식사</span>이 시작합니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
         }
         if(min*1 === 49){
@@ -415,7 +421,7 @@ function setClock(){
             endTime(19, 50, hour, min);
             $("#startTime").html("18:35");
             $("#endTime").html("19:50");
-            $("#timeName").html("석식시간");
+            $("#timeName").html("저녁식사");
         }
     }
     if(hour*1 === 19){
@@ -428,7 +434,7 @@ function setClock(){
             endTime(19, 50, hour, min);
             $("#startTime").html("18:35");
             $("#endTime").html("19:50");
-            $("#timeName").html("석식");
+            $("#timeName").html("저녁식사");
         }
         if(min*1 === 49){
             showPopup();
