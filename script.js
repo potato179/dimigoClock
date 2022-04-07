@@ -501,6 +501,7 @@ function setClock(){
             $("#nmsg2").html("미리 준비하시기 바랍니다. 수고하셨습니다.");
         }
         if(30 <= min*1){
+            hidePopup();
             endTime(30, 30, hour, min);
             $("#startTime").html("22:30");
             $("#endTime").html("+1 06:30");
