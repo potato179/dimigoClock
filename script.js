@@ -1,5 +1,3 @@
-
-
 function setClock(){
     let dateDisplay;
     let timeDisplay;
@@ -20,8 +18,7 @@ function setClock(){
         [0, 00, 6, 30, "취침"],
         [6, 30, 7, 40, "기상"],
         [7, 40, 8, 15, "아침식사"],
-        [8, 15, 8, 35, "아침자습"],
-        [8, 35, 8, 45, "주번활동"],
+        [8, 15, 8, 45, "아침자습"],
         [8, 45, 8, 55, "조회"],
         [8, 55, 9, 0, "휴식"],
         [9, 0, 9, 50, "1교시"],
@@ -39,14 +36,14 @@ function setClock(){
         [15, 50, 16, 40, "7교시"],
         [16, 40, 17, 5, "종례"],
         [17, 5, 17, 10, "휴식"],
-        [17, 10, 17, 50, "방과후T1"],
+        [17, 10, 17, 50, "방과후학습T1"],
         [17, 50, 17, 55, "휴식"],
-        [17, 55, 18, 35, "방과후T2"],
+        [17, 55, 18, 35, "방과후학습T2"],
         [18, 35, 19, 50, "저녁식사"],
-        [19, 10, 21, 10, "야자T1"],
+        [19, 10, 21, 10, "야간자습T1"],
         [21, 10, 21, 30, "휴식"],
-        [21, 30, 22, 30, "야자T2"],
-        [22, 30, 24, 00, "취침"]
+        [21, 30, 22, 30, "야간자습T2"],
+        [22, 30, 30, 30, "취침"]
     ];
 
     let currentTime = new Date();
@@ -69,6 +66,10 @@ function setClock(){
             endTime(time[i][2], time[i][3], currentTime.getHours(), currentTime.getMinutes());
             $("#startTime").html(modifyNumber(time[i][0]) + ":" + modifyNumber(time[i][1]));
             $("#endTime").html(modifyNumber(time[i][2]) + ":" + modifyNumber(time[i][3]));
+            if(time[i][4] === "취침"){
+                $("#startTime").html("22:30");
+                $("#endTime").html("+1 06:30");
+            }
             $("#timeName").html(time[i][4]);
             break;
         }
