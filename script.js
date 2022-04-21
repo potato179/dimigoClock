@@ -56,7 +56,7 @@ function setClock(){
 
         if(start_ - now_ == 1) {
             showPopup();
-            $("#nmsg1").html("잠시후 <span class='yellow'>" + time[i][4] + "</span>이 시작합니다.");
+            $("#nmsg1").html("잠시후 <span class='yellow'>" + time[i][4] + "</span>이(가) 시작합니다.");
             $("#nmsg2").html("미리 준비하시기 바랍니다.");
             break;
         }
