@@ -11,7 +11,7 @@ function setClock(){
     dateDisplay = `${hour}:${min}:${sec}`;
     timeDisplay = `<span class = "red"></span> ${year}년 ${month}월 ${date}일`;
     // var msgList = [""];
-    document.getElementById("timemain").innerHTML = dateDisplay;
+    //document.getElementById("timemain").innerHTML = dateDisplay;
     document.getElementById("date").innerHTML = timeDisplay;
     dateInfo.getHours();
     var time = [

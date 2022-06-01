@@ -18,7 +18,6 @@
         <style>
             html, body{
                 font-family: 'Noto Sans KR', sans-serif;
-                background-image: url(./img/bg1.jpg);
                 background-repeat : no-repeat;
                 background-size : cover;
                 width: 100vw;
@@ -30,32 +29,31 @@
         <meta http-equiv = "refresh" content = "500">
     </head>
     <body onload = "setBackground()">
-        <div id = "main" style = "position: fixed; width: 100%; margin: 50px;">
-            <div class = "d-flex align-items-center text-decoration-none" style = "float: left;">
-                <img src = "./img/dimigoLogo.png" style = "width: 50px; display: inline-block;">&nbsp;&nbsp;&nbsp;
-                <h1 class = "white">한국디지털미디어고등학교</h1>
+            <div style="position: fixed; z-index: -9999; width: 100%; height: 100%">
+                <iframe width = "100%" height = "100%" src="https://www.youtube.com/embed/IqWg89DQyJI?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
+            <div>
+    
+        <div>
+            <br>
+            <div id = "clock" class = "bold" style = "text-align: right; float: right; margin-right: 40px; display: inline-block; background-color: black;">
+                <h1 style = "font-size: 250%;">
+                    <span id = "date" class = "white" class = "date" style = "display: block;">날짜</span>
+                    <span id = "time" class = "bold yellow">시계</span><br>
+                    <span class = "red"><i class="far fa-clock"></i>&nbsp;<span id = "timeleft">0</span>분</span>
+                </h1>
             </div>
-            <div id = "clock" class = "bold" style = "text-align: right; float: right; margin-right: 100px; display: inline-block;">
-                <h1 id = "date" class = "white" class = "date" style = "display: block;">날짜</h1>
-            </div>
-        </div>
-        <div style = "position: fixed; display: table; width: 100vw; height: 100vh;">
-            <div style = "display: table-cell; text-align: center; vertical-align: middle; line-height: 1.25;">
-                <span id = "timemain" class = "bold white" style = "font-size: 1000%;">로딩중</span>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id = "nmsg" style = "text-align: center; background-color: black;">
                 <div id = "nmsg1" class = "bold white" style = "display: none; font-size: 500%;">1</div>
                 <div id = "nmsg2" class = "bold white" style = "display: none; font-size: 500%;">2</div>
-                <div class = "" style = "font-size: 300%; color: #AFDEBE;"><i class="far fa-clock"></i>&nbsp;<span id = "timeleft">0</span>분</div>
             </div>
-        </div>
-        <div class = "center" style = "position: fixed; bottom: 0; width: 100%;">
-            <h1 class = "white" style = "font-size: 350%; display: block;"><span id = "startTime">SSSS</span>&nbsp;&nbsp;<i class = "cornflowerblue fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "timeName">시간 표출 오류</span>&nbsp;&nbsp;<i class = "cornflowerblue fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "endTime">EEEE</span></h1><br>
+            <div class = "center" style = "position: fixed; bottom: 0; width: 100%; background-color: white;">
+                <h1 class = "black" style = "font-size: 350%; display: block;"><span id = "startTime">SSSS</span>&nbsp;&nbsp;<i class = "cornflowerblue fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "timeName">시간 표출 오류</span>&nbsp;&nbsp;<i class = "cornflowerblue fas fa-angle-double-right"></i>&nbsp;&nbsp;<span id = "endTime">EEEE</span></h1><br>
+            </div>
+            
         </div>
         <script src = "./script.js"></script>
         <script>
-            function setBackground(){
-                let bgNum = Math.floor(Math.random() * 6);
-                document.html.style.backgroundImage = 'url("img/morning.jpg")';
-            }
         </script>
     </body>
 </html>
