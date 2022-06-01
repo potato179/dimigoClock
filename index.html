@@ -28,17 +28,17 @@
         </style>
         <meta http-equiv = "refresh" content = "500">
     </head>
-    <body onload = "setBackground()">
-            <div style="position: fixed; z-index: -9999; width: 100%; height: 100%">
-                <iframe width = "100%" height = "100%" src="https://www.youtube.com/embed/IqWg89DQyJI?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    </div>
-            <div>
+    <body>
+        <div style="position: fixed; z-index: 0; width: 100%; height: 100%">
+            <iframe width = "100%" height = "100%" src="https://www.youtube.com/embed/IqWg89DQyJI?autoplay=1&mute=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+        </div>
     
-        <div>
+        <div style = "z-index: 1;">
             <br>
             <div id = "clock" class = "bold" style = "text-align: right; float: right; margin-right: 40px; display: inline-block; background-color: black;">
                 <h1 style = "font-size: 250%;">
                     <span id = "date" class = "white" class = "date" style = "display: block;">날짜</span>
-                    <span id = "time" class = "bold yellow">시계</span><br>
+                    <span id = "timemain" class = "bold yellow">시계</span><br>
                     <span class = "red"><i class="far fa-clock"></i>&nbsp;<span id = "timeleft">0</span>분</span>
                 </h1>
             </div>
@@ -52,6 +52,7 @@
             </div>
             
         </div>
+
         <script src = "./script.js"></script>
         <script>
         </script>
